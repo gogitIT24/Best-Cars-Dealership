@@ -4,7 +4,7 @@ const { Int32 } = require('mongodb'); // Assuming you're using this type later
 
 const Schema = mongoose.Schema;
 
-const carSchema = new Schema({ // Renamed for consistency
+const cars = new Schema({ // Renamed for consistency
   dealer_id: {
     type: Number,
     required: true
@@ -31,4 +31,4 @@ const carSchema = new Schema({ // Renamed for consistency
   }
 });
 
-module.exports = mongoose.model('Car', carSchema); // Singular model name
+module.exports = mongoose.model('cars', cars); // Singular model name

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const dealershipSchema = new Schema({  // Better naming convention
+const dealerships = new Schema({  // Better naming convention
   id: {
     type: Number,
     required: true,
@@ -41,4 +41,4 @@ const dealershipSchema = new Schema({  // Better naming convention
   }
 });
 
-module.exports = mongoose.model('Dealership', dealershipSchema); // Singular name
+module.exports = mongoose.model('dealerships', dealerships); // Singular name

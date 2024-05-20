@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
+const reviews = new Schema({
   id: {
     type: Number,
     required: true,
@@ -41,4 +41,4 @@ const reviewSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Review', reviewSchema); // Model name changed to singular
+module.exports = mongoose.model('reviews', reviews); // Model name changed to singular
