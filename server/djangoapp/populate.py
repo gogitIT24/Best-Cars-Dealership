@@ -14,7 +14,6 @@ def initiate():
         {"name": "Toyota", "description": "Great cars. Japanese technology"},
     ]
 
-    
     car_make_instances = []
     for data in car_make_data:
         car_make_instance = CarMake.objects.create(
@@ -24,7 +23,6 @@ def initiate():
         car_make_instances.append(car_make_instance)
         logger.info(f"Created CarMake: {car_make_instance.name}")
 
-    
     # Create CarModel instances with the corresponding CarMake instances
     car_model_data = [
         {
@@ -89,7 +87,6 @@ def initiate():
         },
     ]
 
-    
     for data in car_model_data:
         car_model_instance = CarModel.objects.create(
             name=data['name'],
@@ -99,4 +96,3 @@ def initiate():
             dealer_id=data['dealer_id']
         )
         logger.info(f"Created CarModel: {car_model_instance.name}")
-
