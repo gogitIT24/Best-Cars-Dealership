@@ -96,3 +96,4 @@ def initiate():
             dealer_id=data['dealer_id']
         )
         logger.info(f"Created CarModel: {car_model_instance.name}")
+        
