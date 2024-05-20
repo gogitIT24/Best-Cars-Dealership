@@ -5,7 +5,7 @@ from .models import CarMake, CarModel
 # CarModelInline class
 class CarModelInline(admin.TabularInline):
     model = CarModel
-    extra = 1  
+    extra = 1
 
 
 # CarModelAdmin class
@@ -18,7 +18,7 @@ class CarModelAdmin(admin.ModelAdmin):
 # CarMakeAdmin class with CarModelInline
 class CarMakeAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
-    inlines = [CarModelInline]  
+    inlines = [CarModelInline]
     search_fields = ['name', 'description']
 
 
