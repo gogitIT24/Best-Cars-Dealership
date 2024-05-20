@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
@@ -42,8 +43,6 @@ app.get('/fetchReviews', async (req, res) => {
     res.status(500).json({ error: 'Error fetching documents' }); // Added semicolon
   }
 });
-
-// ... (rest of the code with arrow functions, async/await, and dot notation)
 
 // Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
