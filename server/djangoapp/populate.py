@@ -14,6 +14,7 @@ def initiate():
         {"name": "Toyota", "description": "Great cars. Japanese technology"},
     ]
 
+    
     car_make_instances = []
     for data in car_make_data:
         car_make_instance = CarMake.objects.create(
@@ -23,25 +24,72 @@ def initiate():
         car_make_instances.append(car_make_instance)
         logger.info(f"Created CarMake: {car_make_instance.name}")
 
+    
     # Create CarModel instances with the corresponding CarMake instances
     car_model_data = [
-        {"name": "Pathfinder", "type": "SUV", "year": 2023, "car_make": car_make_instances[0], "dealer_id": 1},
-        {"name": "Qashqai", "type": "SUV", "year": 2023, "car_make": car_make_instances[0], "dealer_id": 1},
-        {"name": "XTRAIL", "type": "SUV", "year": 2023, "car_make": car_make_instances[0], "dealer_id": 1},
-        {"name": "A-Class", "type": "SUV", "year": 2023, "car_make": car_make_instances[1], "dealer_id": 1},
-        {"name": "C-Class", "type": "SUV", "year": 2023, "car_make": car_make_instances[1], "dealer_id": 1},
-        {"name": "E-Class", "type": "SUV", "year": 2023, "car_make": car_make_instances[1], "dealer_id": 1},
-        {"name": "A4", "type": "SUV", "year": 2023, "car_make": car_make_instances[2], "dealer_id": 1},
-        {"name": "A5", "type": "SUV", "year": 2023, "car_make": car_make_instances[2], "dealer_id": 1},
-        {"name": "A6", "type": "SUV", "year": 2023, "car_make": car_make_instances[2], "dealer_id": 1},
-        {"name": "Sorrento", "type": "SUV", "year": 2023, "car_make": car_make_instances[3], "dealer_id": 1},
-        {"name": "Carnival", "type": "SUV", "year": 2023, "car_make": car_make_instances[3], "dealer_id": 1},
-        {"name": "Cerato", "type": "Sedan", "year": 2023, "car_make": car_make_instances[3], "dealer_id": 1},
-        {"name": "Corolla", "type": "Sedan", "year": 2023, "car_make": car_make_instances[4], "dealer_id": 1},
-        {"name": "Camry", "type": "Sedan", "year": 2023, "car_make": car_make_instances[4], "dealer_id": 1},
-        {"name": "Kluger", "type": "SUV", "year": 2023, "car_make": car_make_instances[4], "dealer_id": 1},
+        {
+            "name": "Pathfinder", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[0], "dealer_id": 1
+        },
+        {
+            "name": "Qashqai", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[0], "dealer_id": 1
+        },
+        {
+            "name": "XTRAIL", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[0], "dealer_id": 1
+        },
+        {
+            "name": "A-Class", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[1], "dealer_id": 1
+        },
+        {
+            "name": "C-Class", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[1], "dealer_id": 1
+        },
+        {
+            "name": "E-Class", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[1], "dealer_id": 1
+        },
+        {
+            "name": "A4", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[2], "dealer_id": 1
+        },
+        {
+            "name": "A5", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[2], "dealer_id": 1
+        },
+        {
+            "name": "A6", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[2], "dealer_id": 1
+        },
+        {
+            "name": "Sorrento", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[3], "dealer_id": 1
+        },
+        {
+            "name": "Carnival", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[3], "dealer_id": 1
+        },
+        {
+            "name": "Cerato", "type": "Sedan", "year": 2023,
+            "car_make": car_make_instances[3], "dealer_id": 1
+        },
+        {
+            "name": "Corolla", "type": "Sedan", "year": 2023,
+            "car_make": car_make_instances[4], "dealer_id": 1
+        },
+        {
+            "name": "Camry", "type": "Sedan", "year": 2023,
+            "car_make": car_make_instances[4], "dealer_id": 1
+        },
+        {
+            "name": "Kluger", "type": "SUV", "year": 2023,
+            "car_make": car_make_instances[4], "dealer_id": 1
+        },
     ]
 
+    
     for data in car_model_data:
         car_model_instance = CarModel.objects.create(
             name=data['name'],
@@ -51,3 +99,4 @@ def initiate():
             dealer_id=data['dealer_id']
         )
         logger.info(f"Created CarModel: {car_model_instance.name}")
+
