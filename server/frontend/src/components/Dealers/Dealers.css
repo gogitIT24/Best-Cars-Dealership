@@ -1,4 +1,4 @@
-table{
+/*table{
     margin:5px;
     padding:10px;
     border: grey solid 1px;
@@ -57,10 +57,10 @@ table{
 
   .reviewer {
     margin: 10px; /* Optional margin for spacing */
-    font-style: italic;
+/*    font-style: italic;
     color: gray;
     font-size: small;
-}
+} 
 
 .review {
   margin-top: 1.5cm;
@@ -85,4 +85,90 @@ table{
 .review_icon:hover {
   transform: scale(1.1);
   border: solid lightgray;
-}
+}*/
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are not duplicated */
+    border: 1px solid grey; /* Add border to the entire table */
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid grey; /* Ensure all cells have a solid border */
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+  }
+  
+  .table th {
+    background-color: #f2f2f2; /* Add background color to header cells */
+    font-weight: bold;
+  }
+  
+  .review_panel {
+    display: flex;
+    flex-direction: column;
+    border: solid grey;
+    position: relative;
+    height: 7cm;
+    width: 6cm;
+    overflow-y: scroll;
+    padding: .3cm;
+    padding-top: 0%;
+    border-radius: 10px;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: .5cm;
+    justify-content: space-between;
+  }
+  
+  .postreview {
+    margin: 20px;
+    padding: 10px;
+    font-size: larger;
+  }
+  
+  .reviews_panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1cm;
+    overflow-wrap: normal;
+    margin-top: 1cm;
+    align-items: flex-start;
+  }
+  
+  .reviewer {
+    margin: 10px; /* Optional margin for spacing */
+    font-style: italic;
+    color: gray;
+    font-size: small;
+  }
+  
+  .review {
+    margin-top: 1.5cm;
+  }
+  
+  .emotion_icon {
+    align-self: center;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #0C9;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+  }
+  
+  .review_icon {
+    width: 40px;
+  }
+  
+  .review_icon:hover {
+    transform: scale(1.1);
+    border: solid lightgray;
+  }
+  
