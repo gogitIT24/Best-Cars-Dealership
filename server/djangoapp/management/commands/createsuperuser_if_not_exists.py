@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 
+
 class Command(BaseCommand):
     help = 'Create a superuser and a regular user if none exist'
 
@@ -9,7 +10,6 @@ class Command(BaseCommand):
         superuser_username = 'derril'
         superuser_password = 'ruffnexx'
         superuser_email = 'admin@example.com'
-        
         regular_username = 'root'
         regular_password = 'ruffnexx'
         regular_email = 'user@example.com'
@@ -32,6 +32,6 @@ class Command(BaseCommand):
                 password=regular_password,
                 email=regular_email
             )
-            self.stdout.write(self.style.SUCCESS('Regular user created.'))
+            self.stdout.write(self.style.SUCCESS('User created.'))
         else:
-            self.stdout.write(self.style.SUCCESS('Regular user already exists.'))
+            self.stdout.write(self.style.SUCCESS('User already exists.'))
